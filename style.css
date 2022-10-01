@@ -1,5 +1,8 @@
 /* Import Google Font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -7,12 +10,9 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-  display: flex;
-  padding: 0 10px;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
-  background: #4C0070;
+  background-color: #4C0070!important;
   color: #63B4B8;
 }
 ::selection{
@@ -20,8 +20,14 @@ body{
   background: #17A2B8;
 }
 .wrapper{
+  
+  display: flex;
+  /*padding: 0 10px;*/
   width: 770px;
   padding: 35px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2%;
   background: #664E88;
   border-radius: 10px;
   box-shadow: 0 10px 15px rgba(0,0,0,0.05);
@@ -194,4 +200,18 @@ li:not(:first-child) span{
   .content button{
     margin-top: 10px;
   }
+}
+.navbar-brand{
+  font-family: 'Raleway Dots', cursive!important;
+  font-size: 25px!important;
+  color: #17A2B8!important;
+}
+#pills-home-tab{
+  color:grey;
+}
+#pills-profile-tab{
+  color:grey;
+}
+#pills-contact-tab{
+  color:grey;
 }
