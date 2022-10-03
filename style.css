@@ -17,7 +17,7 @@ body{
 }
 ::selection{
   color: #fff;
-  background: #17A2B8;
+  background: #b81717;
 }
 .wrapper{
   
@@ -67,9 +67,9 @@ body{
   background: #ffc0cb;*/
   border-radius: 4px;
 }
-.typing-text p span.active{
-  /*color: #17A2B8;*/
-}
+/*.typing-text p span.active{
+  /*color: #17A2B8;
+}*/
 .typing-text p span.active::before{
   position: absolute;
   content: "";
@@ -111,7 +111,31 @@ body{
 .content button:active{
   transform: scale(0.97);
 }
-.content button1{
+.timeOptions button1{
+  outline: none;
+  /*border: none;
+  /*width: 105px;*/
+  color: #fff;
+  /*padding: 8px 0;*/
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  /*background: #17A2B8;*/
+  transition: transform 0.3s ease;
+}
+.timeOptions button2{
+  outline: none;
+  border: none;
+  /*width: 105px;*/
+  color: #fff;
+  /*padding: 8px 0;*/
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  /*background: #17A2B8;*/
+  transition: transform 0.3s ease;
+}
+.timeOptions button3{
   outline: none;
   border: none;
   /*width: 105px;*/
@@ -201,9 +225,12 @@ li:not(:first-child) span{
     margin-top: 10px;
   }
 }
+.navbar-custom {
+  background-color: #664E88
+}
 .navbar-brand{
   font-family: 'Raleway Dots', cursive!important;
-  font-size: 25px!important;
+  font-size: 36px!important;
   color: #17A2B8!important;
 }
 #pills-home-tab{
@@ -214,4 +241,17 @@ li:not(:first-child) span{
 }
 #pills-contact-tab{
   color:grey;
+}
+
+.space{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.space th{
+  padding: 0 15px;
+}
+
+.space td{
+  padding: 0 15px;
 }

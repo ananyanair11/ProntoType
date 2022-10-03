@@ -5,13 +5,59 @@ timeTag = document.querySelector(".time span b"),
 mistakeTag = document.querySelector(".mistake span"),
 wpmTag = document.querySelector(".wpm span"),
 cpmTag = document.querySelector(".cpm span");
-button15s = document.querySelector(".content button1");
-button30s = document.querySelector(".content button2");
-button60s = document.querySelector(".content button3");
+button15s = document.querySelector(".timeOptions button1");
+button30s = document.querySelector(".timeOptions button2");
+button60s = document.querySelector(".timeOptions button3");
+
+button15s.addEventListener("click", setMaxTime15);
+button30s.addEventListener("click", setMaxTime30);
+button60s.addEventListener("click", setMaxTime60);
+
+function setMaxTime15(){
+    loadParagraph();
+    clearInterval(timer);
+    timeTag.innerText=15;
+    maxTime=15;
+    timeLeft = maxTime;
+    charIndex = mistakes = isTyping = 0;
+    inpField.value = "";
+    timeTag.innerText = timeLeft;
+    wpmTag.innerText = 0;
+    mistakeTag.innerText = 0;
+    cpmTag.innerText = 0;
+}
+
+function setMaxTime30(){
+    loadParagraph();
+    clearInterval(timer);
+    timeTag.innerText=30;
+    maxTime=30;
+    timeLeft = maxTime;
+    charIndex = mistakes = isTyping = 0;
+    inpField.value = "";
+    timeTag.innerText = timeLeft;
+    wpmTag.innerText = 0;
+    mistakeTag.innerText = 0;
+    cpmTag.innerText = 0;
+}
+
+function setMaxTime60(){
+    loadParagraph();
+    clearInterval(timer);
+    timeTag.innerText=60;
+    maxTime=60;
+    timeLeft = maxTime;
+    charIndex = mistakes = isTyping = 0;
+    inpField.value = "";
+    timeTag.innerText = timeLeft;
+    wpmTag.innerText = 0;
+    mistakeTag.innerText = 0;
+    cpmTag.innerText = 0;
+}
 
 let timer,
-maxTime = 60,
-timeLeft = maxTime,
+maxTime = 15,
+timeLeft = maxTime,       
 charIndex = mistakes = isTyping = 0;
 
 function loadParagraph() {
@@ -89,21 +135,6 @@ function resetGame() {
     cpmTag.innerText = 0;
 }
 
-function setMaxTime15(){
-
-}
-
-function setMaxTime30(){
-
-}
-
-function setMaxTime60(){
-
-}
-
 loadParagraph();
 inpField.addEventListener("input", initTyping);
 tryAgainBtn.addEventListener("click", resetGame);
-button15s.addEventListener("click", setMaxTime15);
-button30s.addEventListener("click", setMaxTime30);
-button60s.addEventListener("click", setMaxTime60);
