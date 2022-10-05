@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
 
 *{
   margin: 0;
@@ -229,8 +230,9 @@ li:not(:first-child) span{
   background-color: #664E88
 }
 .navbar-brand{
-  font-family: 'Raleway Dots', cursive!important;
+  font-family: 'Codystar', cursive!important;
   font-size: 36px!important;
+  font-weight: 1000;
   color: #17A2B8!important;
 }
 #pills-home-tab{
