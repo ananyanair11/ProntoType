@@ -12,9 +12,9 @@
 }
 body{
   align-items: center;
-  min-height: 100vh;
-  background-color: #4C0070!important;
-  color: #63B4B8;
+  /*min-height: 100vh;*/
+  background-color: #050506!important;
+  color: #654596;
 }
 ::selection{
   color: #fff;
@@ -29,7 +29,7 @@ body{
   justify-content: center;
   margin: auto;
   margin-top: 2%;
-  background: #664E88;
+  background: #120916;
   border-radius: 10px;
   box-shadow: 0 10px 15px rgba(0,0,0,0.05);
 }
@@ -106,7 +106,7 @@ body{
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  background: #17A2B8;
+  background: #74679a;
   transition: transform 0.3s ease;
 }
 .content button:active{
@@ -227,22 +227,22 @@ li:not(:first-child) span{
   }
 }
 .navbar-custom {
-  background-color: #664E88
+  background-color: #120916
 }
 .navbar-brand{
   font-family: 'Codystar', cursive!important;
   font-size: 36px!important;
   font-weight: 1000;
-  color: #17A2B8!important;
+  color: #654596!important;
 }
 #pills-home-tab{
-  color:grey;
+  color:#74679a;
 }
 #pills-profile-tab{
-  color:grey;
+  color:#74679a;
 }
 #pills-contact-tab{
-  color:grey;
+  color:#74679a;
 }
 
 .space{
