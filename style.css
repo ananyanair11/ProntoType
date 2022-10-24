@@ -7,7 +7,7 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   font-family: 'Poppins', sans-serif;
 }
 body{
@@ -30,7 +30,7 @@ body{
   margin: auto;
   margin-top: 2%;
   background: #120916;
-  border-radius: 10px;
+  border-radius: 100px;
   box-shadow: 0 10px 15px rgba(0,0,0,0.05);
 }
 .wrapper .input-field{
@@ -94,7 +94,7 @@ body{
   padding: 12px 0;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   border-top: 1px solid #bfbfbf;
 }
 .content button{
@@ -256,4 +256,9 @@ li:not(:first-child) span{
 
 .space td{
   padding: 0 15px;
+}
+
+.iamspeed{
+  margin:auto;
+  width: 50%;
 }

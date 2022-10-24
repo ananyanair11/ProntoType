@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
     <link rel="stylesheet" href="login.css">
-    <title>Signin Template · Bootstrap v5.2</title>
+    <title>Signin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   
     <link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -42,14 +42,38 @@
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
-      <input type="text" class="form-control" id="floatingInput" placeholder="Username">
+      <input type="text" class="form-control" id="floatingInput" name="Username" placeholder="Username">
       <label for="floatingInput">Username</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" id="floatingPassword" name="Password" placeholder="Password">
       <label for="floatingPassword">Password</label>
     </div>
+    <?php
+  // Create connection to Oracle
+    $conn = oci_connect("system", "system", "localhost/XE");
 
+    if (!$conn) {
+  
+    $m = oci_error();
+  
+    echo $m['message'], "\n";
+ 
+    exit;
+
+    }
+     else {
+      echo $_GET["Username"]; 
+       echo $_POST["Password"]; 
+     }
+    // print "Connected to Oracle DB!";
+
+    // }
+
+    // Close the Oracle connection
+
+    oci_close($conn);
+  ?>
     <div>
       <label>
         <p>New Here?

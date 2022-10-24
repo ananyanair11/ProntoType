@@ -56,7 +56,9 @@ body {
     text-align: center;
 }
 .card{
+  margin:auto;
   text-align:center;
+  width: 50%;
 }
 body {
   display: flex;
