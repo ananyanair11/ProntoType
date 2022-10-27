@@ -10,6 +10,7 @@
 </form>
 
 <?php
+session_start();
  $conn = oci_connect("system", "system", "localhost/XE");
  if (!$conn) {
 
@@ -24,6 +25,7 @@
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field
     $name = $_POST['Username'];
+    $_SESSION['usr']=$name;
     $pass = $_POST['Password'];
     if (empty($name)) {
         echo "username is empty";
@@ -41,7 +43,7 @@
             oci_execute($s);
             $row = oci_fetch_all($s, $res);
             if($row){
-                header("Location: http://localhost/connection/ProntoType/index.html");
+                header("Location: http://localhost/connection/ProntoType/index.html?Username=$name");
             }
             else{
                 echo "Wrong username or password";

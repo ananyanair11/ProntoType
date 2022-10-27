@@ -119,7 +119,38 @@ function initTimer() {
         let wpm = Math.round(((charIndex - mistakes)  / 5) / (maxTime - timeLeft) * 60);
         wpmTag.innerText = wpm;
     } else {
+        accuracy=((charIndex-mistakes)/charIndex)*100;
+        score = (wpm * 0.5) + (accuracy * 0.5);
+        // var analytics= {};
+        // analytics.wpm = 10;
+        // analytics.accuracy = 10;
+        // analytics.score= 10;
         clearInterval(timer);
+        // call php file here
+        // $.ajax({
+        //     url: "insertAnalytics.php",
+        //     method: "post",
+        //     data: analytics,
+        //     success: function(res){
+        //         console.log(res);
+        //     }
+        // })
+
+        //GETTING THE PARAMETERS FROM THE URL (USERNAME)
+        const theUrl = window.location.search;
+        alert(theUrl);
+        const urlParams = new URLSearchParams(theUrl);
+        userName = urlParams.get('Username'); 
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        //document.getElementById("txtHint").innerHTML = this.responseText;
+        xmlhttp.open("GET", "insertAnalytics.php?Username="+ userName + "&wpm="+wpm+"&accuracy="+accuracy+"score="+score, true);
+        xmlhttp.send();
+        }
+        };
+        
     }
 }
 
