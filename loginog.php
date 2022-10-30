@@ -1,22 +1,16 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Login</title>
-    <link rel="stylesheet" href="login2.css">
-  </head>
 <body>
-    <h1 id="verybig">PRONTOTYPE</h1>
-    <h3 id="notsobig">Please Sign in</h3>
-    <div id="example">
+
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
- <p id="whitey"> Username:<input type="text" name="Username"></p><br>
-  <p id="whitey">Password: <input type="password" name="Password"></p><br>
+  UserName: <input type="text" name="Username">
+  Password: <input type="password" name="Password">
   <input type="submit">
 </form>
-</div>
 
 <?php
+session_start();
  $conn = oci_connect("system", "system", "localhost/XE");
  if (!$conn) {
 
@@ -49,7 +43,7 @@
             oci_execute($s);
             $row = oci_fetch_all($s, $res);
             if($row){
-              header("Location: http://localhost/connection/ProntoType/index.html?Username=$name");
+                header("Location: http://localhost/connection/ProntoType/index.html?Username=$name");
             }
             else{
                 echo "Wrong username or password";
@@ -57,5 +51,6 @@
 
  }
 ?>
+
 </body>
 </html>

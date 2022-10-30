@@ -257,9 +257,10 @@ xmlhttp.open("GET", "insertAnalytics.php?wpm="+wordPerMinute+"&accuracy="+accura
         let wpm = Math.round(((charIndex - mistakes)  / 5) / (maxTime - timeLeft) * 60);
         //wordPerMinute
         wpmTag.innerText = wpm;
+        
     } 
     else {
-        
+      alert("Time Up");
         // function getCurrentURL () {
         // return window.location.href;
         // }

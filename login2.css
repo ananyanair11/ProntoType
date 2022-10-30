@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+
+body{
+    background-color: rgb(8, 8, 8) !important;
+    text-align: center;
+}
+
+#example {
+    top: 50%;
+    left: 50%;
+    width: 30em;
+    height: 18em;
+    margin-top: -9em;
+    margin-left: -15em;
+    border: 1px solid #666;
+    background-color: #120916;
+    position: fixed;
+    border-radius: 20px;
+  }
+
+#whitey{
+    color: aliceblue;
+}
+
+#notsobig{
+    top: 48%;
+    left: 50%;
+    width: 30em;
+    height: 18em;
+    margin-top: -9em;
+    margin-left: -15em;
+    position: fixed;
+    color:aliceblue;
+}
+
+#verybig{
+    font-family: 'Codystar', cursive!important;
+  font-size: 36px!important;
+  font-weight: 1000;
+  color: #654596!important;
+}
