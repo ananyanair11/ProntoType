@@ -7,10 +7,10 @@
   </head>
 <body>
     <h1 id="verybig">PRONTOTYPE</h1>
-    <h3 id="notsobig">Please Sign in</h3>
     <div id="example">
+    <h3 id="notsobig">Please Sign in</h3>
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
- <p id="whitey"> Username:<input type="text" name="Username"></p><br>
+ <p id="whitey"> Username:<input type="text" name="Username"></p>
   <p id="whitey">Password: <input type="password" name="Password"></p><br>
   <input type="submit">
 </form>

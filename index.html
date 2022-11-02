@@ -71,7 +71,7 @@
               <span>0</span>
             </li>
           </ul>
-          <button>Try Again</button>
+          <button class="goright">Try Again</button>
         </div>
       </div>
     </div>
@@ -306,7 +306,7 @@ xmlhttp.open("GET", "insertAnalytics.php?wpm="+wordPerMinute+"&accuracy="+accura
         wpmTag.innerText = wpm;
         
     } 
-    else {
+    else if(timeLeft==0){
       alert("Time Up");
         // function getCurrentURL () {
         // return window.location.href;

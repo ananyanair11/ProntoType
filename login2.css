@@ -19,23 +19,25 @@ body{
   }
 
 #whitey{
+  margin-top: 50px;
     color: aliceblue;
 }
 
 #notsobig{
-    top: 48%;
+    /* top: 48%;
     left: 50%;
     width: 30em;
     height: 18em;
     margin-top: -9em;
     margin-left: -15em;
-    position: fixed;
+    position: fixed; */
     color:aliceblue;
 }
 
 #verybig{
     font-family: 'Codystar', cursive!important;
-  font-size: 36px!important;
+  font-size: 50px!important;
   font-weight: 1000;
-  color: #654596!important;
+  color: #956bd4!important;
+  margin-top: 50px;
 }

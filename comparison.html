@@ -41,10 +41,10 @@
             </div>
         </div>
       </nav>
-    <h3> Compare Yourself:</h3><br>
-      <p>Your all time top speed beats <span id="topsp"></span> % of all other people.<br><br>
+    <h2 class="compre"> Compare Yourself:</h2><br><br>
+      <p id="chacol">Your all time top speed beats <span id="topsp"></span> % of all other people.<br><br>
       
-      Your all time average speed beats <span id="avgsp"></span>% of all other people. </p>
+      Your all time average speed beats <span id="avgsp"></span>% of all other people. </p><br><br>
       <script>
         $(document).ready(function(){
 
@@ -106,11 +106,11 @@ $.ajax({
           labels: xValues,
           datasets: [{ 
             data: allMax,
-            borderColor: "red",
+            borderColor: "#FFB6C1",
             fill: false
           }, { 
             data: hp,
-            borderColor: "green",
+            borderColor: "rgb(94, 32, 85)",
             fill: false
           }]
         },
@@ -154,6 +154,7 @@ $.ajax({
   //console.log(highp);
       
       </script>
+      <p id="graphStuff2"> PERCENTILE OF HIGHEST SPEED</p>
         <canvas id="yChart" style="width:100%;max-width:600px"></canvas>
 
         <script>
@@ -186,11 +187,11 @@ $.ajax({
           labels: x,
           datasets: [{ 
             data: allAvg,
-            borderColor: "red",
+            borderColor: "#FFB6C1",
             fill: false
           }, { 
             data: ap,
-            borderColor: "green",
+            borderColor: "rgb(94, 32, 85)",
             fill: false
           }]
         },
@@ -286,6 +287,7 @@ const userName = urlParams.get('Username');
   
   }
         </script>
+        <p id="graphStuff2"> PERCENTILE OF AVERAGE SPEED </p>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
